@@ -372,7 +372,7 @@ passport.use('venmo', new OAuth2Strategy({
  * Login Required middleware.
  */
 
-exports.isAuthenticated = function(req, res, next) {
+module.exports.isAuthenticated = function(req, res, next) {
   if (req.isAuthenticated()) return next();
   res.redirect('/login');
 };
@@ -381,7 +381,7 @@ exports.isAuthenticated = function(req, res, next) {
  * Authorization Required middleware.
  */
 
-exports.isAuthorized = function(req, res, next) {
+module.exports.isAuthorized = function(req, res, next) {
   var provider = req.path.split('/').slice(-1)[0];
   if (_.findWhere(req.user.tokens, { kind: provider })) next();
   else res.redirect('/auth/' + provider);
