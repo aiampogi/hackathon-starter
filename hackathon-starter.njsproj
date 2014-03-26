@@ -1,0 +1,136 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+        <SchemaVersion>2.0</SchemaVersion>
+        <ProjectGuid>{923f73e1-18ad-4b04-a87d-5c7486e4b9f3}</ProjectGuid>
+        <ProjectHome />
+        <ProjectView>ShowAllFiles</ProjectView>
+        <StartupFile>app.js</StartupFile>
+        <WorkingDirectory>.</WorkingDirectory>
+        <OutputPath>.</OutputPath>
+        <ProjectTypeGuids>{3AF33F2E-1136-4D97-BBB7-1795711AC8B8};{349c5851-65df-11da-9384-00065b846f21};{9092AA53-FB77-4645-B42D-1CCCA6BD08BD}</ProjectTypeGuids>
+        <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">11.0</VisualStudioVersion>
+        <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Configuration)' == 'Debug'" />
+    <PropertyGroup Condition="'$(Configuration)' == 'Release'" />
+    <ItemGroup>
+        <Content Include="package.json" />
+        <Content Include="README.md" />
+        <Compile Include="app.js" />
+        <Compile Include="cluster_app.js" />
+        <Compile Include="config\passport.js" />
+        <Compile Include="config\secrets.js" />
+        <Compile Include="config\server.js" />
+        <Compile Include="controllers\api.js" />
+        <Compile Include="controllers\contact.js" />
+        <Compile Include="controllers\home.js" />
+        <Compile Include="controllers\user.js" />
+        <Compile Include="core\index.js" />
+        <Compile Include="models\User.js" />
+        <Compile Include="test\app.js" />
+        <Compile Include="test\models.js" />
+        <Content Include="views\404.jade" />
+        <Content Include="views\contact.jade" />
+        <Content Include="views\home.jade" />
+        <Content Include="views\layout.jade" />
+        <Compile Include="core\database\index.js" />
+        <Compile Include="core\middleware\index.js" />
+        <Compile Include="core\routes\api.js" />
+        <Compile Include="core\routes\application.js" />
+        <Compile Include="core\routes\index.js" />
+        <Content Include="public\fonts\fontawesome-webfont.svg" />
+        <Content Include="public\img\npm-logo.png" />
+        <Content Include="public\img\paypal.png" />
+        <Compile Include="public\js\application.js" />
+        <Compile Include="public\js\main.js" />
+        <Content Include="public\css\lib\animate.css" />
+        <Content Include="public\css\lib\font-awesome.min.css" />
+        <Compile Include="public\js\lib\bootstrap.min.js" />
+        <Compile Include="public\js\lib\jquery-2.1.0.min.js" />
+        <Content Include="views\account\forgot.jade" />
+        <Content Include="views\account\login.jade" />
+        <Content Include="views\account\profile.jade" />
+        <Content Include="views\account\reset.jade" />
+        <Content Include="views\account\signup.jade" />
+        <Content Include="views\api\aviary.jade" />
+        <Content Include="views\api\clockwork.jade" />
+        <Content Include="views\api\facebook.jade" />
+        <Content Include="views\api\foursquare.jade" />
+        <Content Include="views\api\github.jade" />
+        <Content Include="views\api\index.jade" />
+        <Content Include="views\api\lastfm.jade" />
+        <Content Include="views\api\linkedin.jade" />
+        <Content Include="views\api\nyt.jade" />
+        <Content Include="views\api\paypal.jade" />
+        <Content Include="views\api\scraping.jade" />
+        <Content Include="views\api\steam.jade" />
+        <Content Include="views\api\tumblr.jade" />
+        <Content Include="views\api\twilio.jade" />
+        <Content Include="views\api\twitter.jade" />
+        <Content Include="views\api\venmo.jade" />
+        <Content Include="views\partials\flash.jade" />
+        <Content Include="views\partials\footer.jade" />
+        <Content Include="views\partials\navigation.jade" />
+    </ItemGroup>
+    <ItemGroup>
+        <Folder Include="config" />
+        <Folder Include="controllers" />
+        <Folder Include="core" />
+        <Folder Include="core\database" />
+        <Folder Include="core\middleware" />
+        <Folder Include="core\routes" />
+        <Folder Include="models" />
+        <Folder Include="public\css\lib" />
+        <Folder Include="public\fonts" />
+        <Folder Include="public\img" />
+        <Folder Include="public\js" />
+        <Folder Include="public\js\lib" />
+        <Folder Include="test" />
+        <Folder Include="views" />
+        <Folder Include="views\account" />
+        <Folder Include="views\api" />
+        <Folder Include="views\partials" />
+    </ItemGroup>
+    <Import Project="$(MSBuildToolsPath)\Microsoft.Common.targets" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+    <Import Project="$(VSToolsPath)\Node.js Tools\Microsoft.NodejsTools.targets" />
+    <ProjectExtensions>
+        <VisualStudio>
+          <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+            <WebProjectProperties>
+              <UseIIS>False</UseIIS>
+              <AutoAssignPort>True</AutoAssignPort>
+              <DevelopmentServerPort>0</DevelopmentServerPort>
+              <DevelopmentServerVPath>/</DevelopmentServerVPath>
+              <IISUrl>http://localhost:48022/</IISUrl>
+              <NTLMAuthentication>False</NTLMAuthentication>
+              <UseCustomServer>True</UseCustomServer>
+              <CustomServerUrl>http://localhost:1337</CustomServerUrl>
+              <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+            </WebProjectProperties>
+          </FlavorProperties>
+          <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}" User="">
+            <WebProjectProperties>
+              <StartPageUrl>
+              </StartPageUrl>
+              <StartAction>CurrentPage</StartAction>
+              <AspNetDebugging>True</AspNetDebugging>
+              <SilverlightDebugging>False</SilverlightDebugging>
+              <NativeDebugging>False</NativeDebugging>
+              <SQLDebugging>False</SQLDebugging>
+              <ExternalProgram>
+              </ExternalProgram>
+              <StartExternalURL>
+              </StartExternalURL>
+              <StartCmdLineArguments>
+              </StartCmdLineArguments>
+              <StartWorkingDirectory>
+              </StartWorkingDirectory>
+              <EnableENC>False</EnableENC>
+              <AlwaysStartWebServerOnDebug>False</AlwaysStartWebServerOnDebug>
+            </WebProjectProperties>
+          </FlavorProperties>
+        </VisualStudio>
+    </ProjectExtensions>
+</Project>
