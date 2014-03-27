@@ -9,6 +9,6 @@
  * at the bottom of the compiled file.
  */
 
-//= require lib/jquery-2.1.0.min
-//= require lib/bootstrap.min
+//= require jquery.min.js
+//= require bootstrap.min.js
 //= require main

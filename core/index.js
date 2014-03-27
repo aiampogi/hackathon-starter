@@ -9,9 +9,11 @@ var routes = require('./routes');
 var db = require('./database');
 var serverConfig = require('../config/server');
 
+// Create express server upon require
+var app = express();
+
 function initAndStartApp() {
-  // Create express server
-  var app = express();
+
 
   // Mongoose configuration.
   db.init();
@@ -34,3 +36,4 @@ function initAndStartApp() {
 }
 
 module.exports = initAndStartApp;
+module.exports.expressApp = app;

@@ -14,8 +14,12 @@ var day = (hour * 24);
 var month = (day * 30);
 
 function middleware(app){
+
+	// initialize passport singleton
+	passportConf();
+
 	app.use(connectAssets({
-		paths: ['public/css', 'public/js'],
+		paths: ['public/css', 'public/js', 'bower_components/jquery/dist','bower_components/bootstrap/dist/js', 'bower_components/bootstrap/less'],
 		helperContext: app.locals
 	}));
 	app.use(express.compress());

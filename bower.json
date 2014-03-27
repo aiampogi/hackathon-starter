@@ -1,0 +1,46 @@
+{
+  "name": "hackathon-starter",
+  "description": "A fork from sahat's hackathon-starter",
+  "version": "1.0.0",
+  "author": "Aia Patag",
+  "homepage": "http://hackathonstarter.herokuapp.com/",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/aiampogi/hackathon-starter.git"
+  },
+  "license": "MIT",
+  "ignore": [
+    "2",
+    "api",
+    "assets",
+    "bower_components",
+    "custom",
+    "default",
+    "global",
+    "help",
+    "tests",
+    "_config.yml",
+    ".gitignore",
+    ".travis.yml",
+    "CNAME",
+    "composer.json",
+    "favicon.ico",
+    "Gemfile",
+    "Gruntfile.js",
+    "index.html",
+    "package.json",
+    "*/index.html",
+    "*/thumbnail.png"
+  ],
+  "dependencies": {
+    "jquery": "~2.1.0",
+    "bootstrap": "~3.1.1",
+    "bootstrap-social": "~4.2.1",
+    "font-awesome": "~4.0.0",
+    "animate.css": "~3.1.0"
+  },
+  "devDependencies": {
+    "html5shiv": "~3.7.0",
+    "respond": "~1.4.2"
+  }
+}
