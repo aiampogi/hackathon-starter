@@ -19,8 +19,15 @@ function middleware(app){
 	passportConf();
 
 	app.use(connectAssets({
-		paths: ['public/css', 'public/js', 'bower_components/jquery/dist','bower_components/bootstrap/dist/js', 'bower_components/bootstrap/less'],
+		paths: [path.join(appRoot, 'public/css'),
+				path.join(appRoot, 'public/js'),
+				path.join(appRoot, 'bower_components')],
 		helperContext: app.locals
+		// ,
+		// compile: true,
+		// buildDir: "builtAssets",
+		// compress : true,
+		// build: true
 	}));
 	app.use(express.compress());
 	app.use(express.favicon());
